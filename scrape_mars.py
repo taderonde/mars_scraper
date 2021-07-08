@@ -45,6 +45,7 @@ def scrape_info():
     # put profile table in variable
     df_mars = dfs[1]
     df_mars.set_index(df_mars.columns[0], inplace=True)
+    df_mars.index.name = None
 
     # convert df to html table
     mars_fact_table = df_mars.to_html(header=False)
